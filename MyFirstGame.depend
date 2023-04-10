@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1681115785 source:e:\myfirstgame\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	"Engine.h"
+	<string>
+
+1681121589 source:e:\myfirstgame\src\core\engine.cpp
+	"Engine.h"
+	<iostream>
+	<string>
+	"TextureManager.h"
+
+1681116954 e:\myfirstgame\src\core\engine.h
+	<SDL.h>
+	<SDL_image.h>
+	<string>
+
+1681121492 source:e:\myfirstgame\src\graphics\texturemanager.cpp
+	"TextureManager.h"
+	<iostream>
+	"Engine.h"
+
+1681120428 e:\myfirstgame\src\graphics\texturemanager.h
+	<string>
+	<SDL.h>
+	<map>
+

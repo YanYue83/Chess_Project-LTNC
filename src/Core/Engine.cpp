@@ -1,9 +1,6 @@
 #include "Engine.h"
-#include <iostream>
-#include <string>
 #include "TextureManager.h"
-
-using namespace std;
+#include "Transform.h"
 
 Engine* Engine::s_Instance = nullptr;
 
@@ -30,6 +27,8 @@ bool Engine::Init()
     SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     TextureManager::GetInstance()->Load("Mockup", "Asset/Mockup.png");
+
+
    return m_IsRunning = true;
 }
 
@@ -42,10 +41,6 @@ bool Engine::Clean()
     SDL_Quit();
 }
 
-void Engine::Quit()
-{
-    m_IsRunning = false;
-}
 
 void Engine::Update()
 {
@@ -69,4 +64,8 @@ void Engine::Events()
         Quit(); break;
     }
 
+}
+void Engine::Quit()
+{
+    m_IsRunning = false;
 }

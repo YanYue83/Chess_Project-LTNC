@@ -9,12 +9,15 @@ bool TextureManager::Load(std::string id, std::string filename)
     SDL_Surface* surface = IMG_Load(filename.c_str());
     if(surface == nullptr) {
         std::cout << "Failed to load texture: " << filename.c_str() << SDL_GetError();
-            return false; }
+            return false;
+    }
+
     SDL_Texture* texture = SDL_CreateTextureFromSurface(Engine::GetInstance()->GetRenderer(), surface);
     if(texture==nullptr) {
         std::cout << "Failed to create texture from surface: " << SDL_GetError();
         return false;
     }
+
     m_TextureMap[id] = texture;
     return true;
 }
@@ -34,8 +37,9 @@ void TextureManager::Drop(std::string id)
 void TextureManager::Clean()
 {
     std::map <std::string, SDL_Texture*>::iterator it;
+    for(it = m_TextureMap.begin(); it != m_TextureMap.end(); it++)
     SDL_DestroyTexture(it->second);
 
     m_TextureMap.clear();
-
+    SDL_Log("texture map cleaned!");
 }

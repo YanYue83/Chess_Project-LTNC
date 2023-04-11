@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="src/Core" />
 					<Add directory="src/Graphics" />
+					<Add directory="src/Physics" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,6 +27,7 @@
 					<Add option="-O2" />
 					<Add directory="src/Core" />
 					<Add directory="src/Graphics" />
+					<Add directory="src/Physics" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -41,6 +43,8 @@
 		<Unit filename="src/Core/Engine.h" />
 		<Unit filename="src/Graphics/TextureManager.cpp" />
 		<Unit filename="src/Graphics/TextureManager.h" />
+		<Unit filename="src/Physics/Transform.h" />
+		<Unit filename="src/Physics/Vector_2D.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

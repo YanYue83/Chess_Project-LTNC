@@ -1,8 +1,5 @@
 # depslib dependency file v1.0
-1681214707 source:e:\myfirstgame\main.cpp
-	<iostream>
-	<SDL.h>
-	<SDL_image.h>
+1681215904 source:e:\myfirstgame\main.cpp
 	"Engine.h"
 
 1681215823 source:e:\myfirstgame\src\core\engine.cpp

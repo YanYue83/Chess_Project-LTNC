@@ -1,5 +1,5 @@
-#ifndef VECTOR_2D_H
-#define VECTOR_2D_H
+#ifndef VECTOR2D_H
+#define VECTOR2D_H
 
 #include <iostream>
 
@@ -22,8 +22,8 @@ class Vector2D{
         }
 
         // multiplication *
-        inline Vector2D operator*(const float n) const {
-            return Vector2D(X*n, Y*n);
+        inline Vector2D operator*(const float scalar) const {
+            return Vector2D(X*scalar, Y*scalar);
         }
 
         void Log(std::string msg = ""){
@@ -31,4 +31,5 @@ class Vector2D{
         }
 };
 
-#endif // VECTOR_2D_H
+#endif // VECTOR2D_H
+

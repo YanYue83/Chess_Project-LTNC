@@ -2,7 +2,12 @@
 #include "TextureManager.h"
 #include "Transform.h"
 
+#include "Player.h"
+#include "InputHandler.h"
+#include "Timer.h"
+
 Engine* Engine::s_Instance = nullptr;
+Player* P = nullptr;
 
 void logSDLError(std::ostream& os,
                  const std::string &msg, bool fatal)
@@ -25,13 +30,46 @@ bool Engine::Init()
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
     SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
+//load anh
+    TextureManager::GetInstance()->Load("wizard", "Asset/Wizard Pack/Idle.png");
+    TextureManager::GetInstance()->Load("run", "Asset/Wizard Pack/Run.png");
+    TextureManager::GetInstance()->Load("attack", "Asset/Wizard Pack/Attack2.png");
+    TextureManager::GetInstance()->Load("jump", "Asset/Wizard Pack/Jump.png");
+    TextureManager::GetInstance()->Load("fall", "Asset/Wizard Pack/Fall.png");
 
-    TextureManager::GetInstance()->Load("Mockup", "Asset/Mockup.png");
+   // TextureManager::GetInstance()->Load("fall", "Asset/Wizard Pack/t1.png");
 
+    P = new Player(new Properties("wizard", 1, 1, 231, 190));
 
+    TextureManager::GetInstance()->Load("bg", "Asset/Mockup.png");
+
+    Transform tf;
+    tf.Log();
    return m_IsRunning = true;
 }
 
+void Engine::Update()
+{
+    float dt = Timer::GetInstance()->GetDeltaTime();
+    P->Update(dt);
+}
+
+void Engine::Render()
+{
+    SDL_SetRenderDrawColor(renderer, 174, 218, 254, 255);
+    SDL_RenderPresent(renderer);
+
+    TextureManager::GetInstance()->Draw("bg", 0 , 0, 1600, 400);
+
+    P->Draw();
+
+    SDL_RenderPresent(renderer);
+}
+
+void Engine::Events()
+{
+    Input::GetInstance()->Listen();
+}
 bool Engine::Clean()
 {
     TextureManager::GetInstance()->Clean();
@@ -41,30 +79,6 @@ bool Engine::Clean()
     SDL_Quit();
 }
 
-
-void Engine::Update()
-{
-}
-
-void Engine::Render()
-{
-    SDL_SetRenderDrawColor(renderer, 174, 218, 254, 255);
-    SDL_RenderPresent(renderer);
-    TextureManager::GetInstance()->Draw("Mockup", 0, 0, 1600, 400);
-    SDL_RenderPresent(renderer);
-}
-
-void Engine::Events()
-{
-    SDL_Event event;
-    SDL_PollEvent(&event);
-    switch(event.type)
-    {
-    case SDL_QUIT:
-        Quit(); break;
-    }
-
-}
 void Engine::Quit()
 {
     m_IsRunning = false;

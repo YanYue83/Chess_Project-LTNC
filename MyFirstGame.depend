@@ -1,18 +1,22 @@
 # depslib dependency file v1.0
-1681215904 source:e:\myfirstgame\main.cpp
+1681375900 source:e:\myfirstgame\main.cpp
 	"Engine.h"
+	"Timer.h"
 
-1681215823 source:e:\myfirstgame\src\core\engine.cpp
+1681378242 source:e:\myfirstgame\src\core\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	"Transform.h"
+	"Player.h"
+	"InputHandler.h"
+	"Timer.h"
 
 1681213757 e:\myfirstgame\src\core\engine.h
 	<SDL.h>
 	<SDL_image.h>
 	<string>
 
-1681215341 source:e:\myfirstgame\src\graphics\texturemanager.cpp
+1681221663 source:e:\myfirstgame\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	<iostream>
 	"Engine.h"
@@ -22,9 +26,65 @@
 	<SDL.h>
 	<map>
 
-1681215541 e:\myfirstgame\src\physics\vector_2d.h
+1681271117 e:\myfirstgame\src\physics\vector_2d.h
 	<iostream>
 
-1681215567 e:\myfirstgame\src\physics\transform.h
+1681272695 e:\myfirstgame\src\physics\transform.h
 	"Vector_2D.h"
+
+1681270453 e:\myfirstgame\src\characters\player.h
+	"Animation.h"
+	"Character.h"
+	"RigidBody.h"
+
+1681225028 e:\myfirstgame\src\characters\character.h
+	"GameObject.h"
+	<string>
+
+1681224968 e:\myfirstgame\src\object\gameobject.h
+	<SDL.h>
+	"IObject.h"
+	"Transform.h"
+
+1681224665 e:\myfirstgame\src\object\iobject.h
+
+1681378464 source:e:\myfirstgame\src\characters\player.cpp
+	"Player.h"
+	"TextureManager.h"
+	"Animation.h"
+	"InputHandler.h"
+
+1681268365 source:e:\myfirstgame\src\animation\animation.cpp
+	"Animation.h"
+	"TextureManager.h"
+
+1681268365 e:\myfirstgame\src\animation\animation.h
+	<SDL.h>
+	<string>
+
+1681378129 e:\myfirstgame\src\physics\rigidbody.h
+	"Vector_2D.h"
+
+1681274861 source:e:\myfirstgame\src\inputs\inputhandler.cpp
+	"InputHandler.h"
+	"Engine.h"
+
+1681274366 e:\myfirstgame\src\inputs\inputhandler.h
+	"SDL.h"
+
+1681375437 source:e:\myfirstgame\src\timer\timer.cpp
+	"Timer.h"
+	"SDL.h"
+
+1681375234 e:\myfirstgame\src\timer\timer.h
+
+1681379616 source:e:\myfirstgame\src\map\tilelayer.cpp
+	"TileLayer.h"
+
+1681379373 e:\myfirstgame\src\map\tilelayer.h
+	"Layer.h"
+	<string>
+	<vector>
+
+1681376713 e:\myfirstgame\src\map\layer.h
 

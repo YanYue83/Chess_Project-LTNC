@@ -3,9 +3,10 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <string>
+#include "GameMap.h"
 
 const int SCREEN_WIDTH = 1080;
-const int SCREEN_HEIGHT = 800;
+const int SCREEN_HEIGHT = 600;
 const std::string WINDOW_TITLE = "Forest";
 
 class Engine
@@ -31,6 +32,7 @@ class Engine
         Engine(){};
         bool m_IsRunning;
 
+        GameMap *m_LevelMap;
         SDL_Window *window;
         SDL_Renderer *renderer;
 

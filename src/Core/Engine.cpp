@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "InputHandler.h"
 #include "Timer.h"
+#include "MapParser.h"
 
 Engine* Engine::s_Instance = nullptr;
 Player* P = nullptr;
@@ -22,7 +23,9 @@ bool Engine::Init()
 {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) logSDLError(std::cout, "SDL_Init", true);
 
-        window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+
+        window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, window_flags);
     if (window == nullptr) logSDLError(std::cout, "CreateWindow", true);
 
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
@@ -30,18 +33,23 @@ bool Engine::Init()
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
     SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
+
 //load anh
+    if(MapParser::GetInstance()->Load()) {
+        std::cout << "Failed to load map" <<std::endl;
+    }
+    m_LevelMap = MapParser::GetInstance()->GetMaps("forest");
+
     TextureManager::GetInstance()->Load("wizard", "Asset/Wizard Pack/Idle.png");
     TextureManager::GetInstance()->Load("run", "Asset/Wizard Pack/Run.png");
     TextureManager::GetInstance()->Load("attack", "Asset/Wizard Pack/Attack2.png");
     TextureManager::GetInstance()->Load("jump", "Asset/Wizard Pack/Jump.png");
     TextureManager::GetInstance()->Load("fall", "Asset/Wizard Pack/Fall.png");
 
-   // TextureManager::GetInstance()->Load("fall", "Asset/Wizard Pack/t1.png");
-
     P = new Player(new Properties("wizard", 1, 1, 231, 190));
 
-    TextureManager::GetInstance()->Load("bg", "Asset/Mockup.png");
+
+    //TextureManager::GetInstance()->Load("bg", "Asset/Mockup.png");
 
     Transform tf;
     tf.Log();
@@ -51,6 +59,7 @@ bool Engine::Init()
 void Engine::Update()
 {
     float dt = Timer::GetInstance()->GetDeltaTime();
+    m_LevelMap->Update();
     P->Update(dt);
 }
 
@@ -59,8 +68,8 @@ void Engine::Render()
     SDL_SetRenderDrawColor(renderer, 174, 218, 254, 255);
     SDL_RenderPresent(renderer);
 
-    TextureManager::GetInstance()->Draw("bg", 0 , 0, 1600, 400);
-
+    //TextureManager::GetInstance()->Draw("bg", 0 , 0, 1600, 400);
+    m_LevelMap->Render();
     P->Draw();
 
     SDL_RenderPresent(renderer);

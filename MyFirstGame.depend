@@ -1,27 +1,29 @@
 # depslib dependency file v1.0
-1681375900 source:e:\myfirstgame\main.cpp
+1681656531 source:e:\myfirstgame\main.cpp
 	"Engine.h"
 	"Timer.h"
 
-1681378242 source:e:\myfirstgame\src\core\engine.cpp
+1681869888 source:e:\myfirstgame\src\core\engine.cpp
 	"Engine.h"
 	"TextureManager.h"
 	"Transform.h"
 	"Player.h"
 	"InputHandler.h"
 	"Timer.h"
+	"MapParser.h"
 
-1681213757 e:\myfirstgame\src\core\engine.h
+1681869920 e:\myfirstgame\src\core\engine.h
 	<SDL.h>
 	<SDL_image.h>
 	<string>
+	"GameMap.h"
 
-1681221663 source:e:\myfirstgame\src\graphics\texturemanager.cpp
+1681866219 source:e:\myfirstgame\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	<iostream>
 	"Engine.h"
 
-1681215023 e:\myfirstgame\src\graphics\texturemanager.h
+1681865921 e:\myfirstgame\src\graphics\texturemanager.h
 	<string>
 	<SDL.h>
 	<map>
@@ -48,7 +50,7 @@
 
 1681224665 e:\myfirstgame\src\object\iobject.h
 
-1681378464 source:e:\myfirstgame\src\characters\player.cpp
+1681387746 source:e:\myfirstgame\src\characters\player.cpp
 	"Player.h"
 	"TextureManager.h"
 	"Animation.h"
@@ -78,13 +80,61 @@
 
 1681375234 e:\myfirstgame\src\timer\timer.h
 
-1681379616 source:e:\myfirstgame\src\map\tilelayer.cpp
+1681868859 source:e:\myfirstgame\src\map\tilelayer.cpp
 	"TileLayer.h"
+	"TextureManager.h"
 
-1681379373 e:\myfirstgame\src\map\tilelayer.h
+1681720675 e:\myfirstgame\src\map\tilelayer.h
 	"Layer.h"
 	<string>
 	<vector>
 
 1681376713 e:\myfirstgame\src\map\layer.h
+
+1681869080 source:e:\myfirstgame\src\map\mapparser.cpp
+	"MapParser.h"
+
+1681724561 e:\myfirstgame\src\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	"TileLayer.h"
+	"tinyxml.h"
+
+1681724642 e:\myfirstgame\src\map\gamemap.h
+	"Layer.h"
+	<vector>
+
+1376507762 e:\myfirstgame\src\ref\tinyxml\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 e:\myfirstgame\src\ref\tinyxml\tinystr.h
+	<assert.h>
+	<string.h>
+
+1376507762 source:e:\myfirstgame\src\ref\tinyxml\tinystr.cpp
+	"tinystr.h"
+
+1376507762 source:e:\myfirstgame\src\ref\tinyxml\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1376507762 source:e:\myfirstgame\src\ref\tinyxml\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:e:\myfirstgame\src\ref\tinyxml\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
 

@@ -18,6 +18,7 @@ void Player::Draw()
 void Player::Update(float dt)
 {
     m_Animation->SetProps("wizard", 1, 6, 150);
+
     m_RigidBody->UnsetForce();
 
     if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_J)) {

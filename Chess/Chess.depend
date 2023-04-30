@@ -1,0 +1,172 @@
+# depslib dependency file v1.0
+1682845493 source:e:\chess\src\engine\engine.cpp
+	"Engine.h"
+	"Engine.h"
+
+1682845017 e:\chess\src\engine\engine.h
+	"Gameboard.h"
+	"Structure.h"
+	<ctime>
+
+1682846561 source:e:\chess\src\engine\test.cpp
+	"Test.h"
+	<chrono>
+
+1682844645 e:\chess\src\engine\test.h
+	"Engine.h"
+	"Gameboard.h"
+
+1682845763 source:e:\chess\src\gamemanager\gameboard.cpp
+	"GameBoard.h"
+	"Engine.h"
+	<SDL_render.h>
+
+1682844076 e:\chess\src\gamemanager\gameboard.h
+	"BoardState.h"
+	"Game.h"
+	"Player.h"
+	"Bishop.h"
+	"King.h"
+	"Knight.h"
+	"Pawn.h"
+	"Queen.h"
+	"Rook.h"
+	"SoundManager.h"
+	"Texture.h"
+	"GameState.h"
+
+1682845623 source:e:\chess\src\gamemanager\gamemenu.cpp
+	"GameMenu.h"
+	"TextureManager.h"
+	<map>
+
+1682844076 e:\chess\src\gamemanager\gamemenu.h
+	"Game.h"
+	"GameState.h"
+	"Texture.h"
+
+1682843622 source:e:\chess\src\gamemanager\statemachine.cpp
+	"StateMachine.h"
+
+1682843622 e:\chess\src\gamemanager\statemachine.h
+	<memory>
+	<stack>
+	"GameState.h"
+
+1682845382 source:e:\chess\src\pieces\bishop.cpp
+	"Bishop.h"
+
+1682845364 e:\chess\src\pieces\bishop.h
+	"Piece.h"
+
+1682845817 source:e:\chess\src\pieces\king.cpp
+	"King.h"
+	"BoardState.h"
+
+1682844191 e:\chess\src\pieces\king.h
+	"Piece.h"
+
+1682846206 source:e:\chess\src\pieces\knight.cpp
+	"Knight.h"
+	"BoardState.h"
+
+1682844191 e:\chess\src\pieces\knight.h
+	"Piece.h"
+
+1682846297 source:e:\chess\src\pieces\pawn.cpp
+	"Pawn.h"
+	"Bishop.h"
+	"BoardState.h"
+	"Knight.h"
+	"Queen.h"
+	"Rook.h"
+
+1682844191 e:\chess\src\pieces\pawn.h
+	"Piece.h"
+
+1682846401 source:e:\chess\src\pieces\piece.cpp
+	"Piece.h"
+	"BoardState.h"
+	"Engine.h"
+
+1682844266 e:\chess\src\pieces\piece.h
+	"Structure.h"
+
+1682846460 source:e:\chess\src\pieces\queen.cpp
+	"Queen.h"
+
+1682844326 e:\chess\src\pieces\queen.h
+	"Piece.h"
+
+1682846482 source:e:\chess\src\pieces\rook.cpp
+	"Rook.h"
+
+1682844326 e:\chess\src\pieces\rook.h
+	"Piece.h"
+
+1682846435 source:e:\chess\src\player\player.cpp
+	"Player.h"
+
+1682846095 e:\chess\src\player\player.h
+	"Piece.h"
+	"Structure.h"
+	<string>
+
+1682846656 source:e:\chess\src\texture\texture.cpp
+	"Texture.h"
+	"Game.h"
+
+1682845157 e:\chess\src\texture\texture.h
+	"TextureManager.h"
+	<iostream>
+
+1682821745 source:e:\chess\src\texture\texturemanger.cpp
+	"TextureManger.h"
+
+1682844645 e:\chess\src\texture\texturemanger.h
+	<SDL2/SDL.h>
+
+1682843517 e:\chess\src\gamemanager\gamestate.h
+	<SDL.h>
+
+1682844203 e:\chess\src\gamemanager\boardstate.h
+	"Piece.h"
+	"Player.h"
+	"Structure.h"
+
+1682842976 e:\chess\src\gamemanager\game.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<iostream>
+	"StateMachine.h"
+
+1682844460 e:\chess\src\engine\structure.h
+	<iostream>
+	<map>
+	<string>
+	<vector>
+
+1682844645 e:\chess\src\sound\soundmanager.h
+	<SDL_mixer.h>
+
+1682845157 e:\chess\src\texture\texturemanager.h
+	<SDL.h>
+
+1682821880 source:e:\chess\main.cpp
+	"Game.h"
+	"Test.h"
+
+1682845649 source:e:\chess\src\gamemanager\game.cpp
+	"Game.h"
+	"GameMenu.h"
+	"GameBoard.h"
+
+1682846561 source:e:\chess\src\sound\soundmanager.cpp
+	"SoundManager.h"
+
+1682846656 source:e:\chess\src\texture\texturemanager.cpp
+	"TextureManager.h"
+	"Game.h"
+

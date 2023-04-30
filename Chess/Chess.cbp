@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Chess" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Chess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="src/GameManager" />
+					<Add directory="src/Pieces" />
+					<Add directory="src/Engine" />
+					<Add directory="src/Player" />
+					<Add directory="Engine" />
+					<Add directory="src/Texture" />
+					<Add directory="src/Sound" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Chess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="src/GameManager" />
+					<Add directory="src/Pieces" />
+					<Add directory="src/Engine" />
+					<Add directory="src/Player" />
+					<Add directory="Engine" />
+					<Add directory="src/Texture" />
+					<Add directory="src/Sound" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Engine/Engine.cpp" />
+		<Unit filename="src/Engine/Engine.h" />
+		<Unit filename="src/Engine/Structure.h" />
+		<Unit filename="src/Engine/Test.cpp" />
+		<Unit filename="src/Engine/Test.h" />
+		<Unit filename="src/GameManager/BoardState.h" />
+		<Unit filename="src/GameManager/Game.cpp" />
+		<Unit filename="src/GameManager/Game.h" />
+		<Unit filename="src/GameManager/GameBoard.cpp" />
+		<Unit filename="src/GameManager/GameBoard.h" />
+		<Unit filename="src/GameManager/GameMenu.cpp" />
+		<Unit filename="src/GameManager/GameMenu.h" />
+		<Unit filename="src/GameManager/GameState.h" />
+		<Unit filename="src/GameManager/StateMachine.cpp" />
+		<Unit filename="src/GameManager/StateMachine.h" />
+		<Unit filename="src/Pieces/Bishop.cpp" />
+		<Unit filename="src/Pieces/Bishop.h" />
+		<Unit filename="src/Pieces/King.cpp" />
+		<Unit filename="src/Pieces/King.h" />
+		<Unit filename="src/Pieces/Knight.cpp" />
+		<Unit filename="src/Pieces/Knight.h" />
+		<Unit filename="src/Pieces/Pawn.cpp" />
+		<Unit filename="src/Pieces/Pawn.h" />
+		<Unit filename="src/Pieces/Piece.cpp" />
+		<Unit filename="src/Pieces/Piece.h" />
+		<Unit filename="src/Pieces/Queen.cpp" />
+		<Unit filename="src/Pieces/Queen.h" />
+		<Unit filename="src/Pieces/Rook.cpp" />
+		<Unit filename="src/Pieces/Rook.h" />
+		<Unit filename="src/Player/Player.cpp" />
+		<Unit filename="src/Player/Player.h" />
+		<Unit filename="src/Sound/SoundManager.cpp" />
+		<Unit filename="src/Sound/SoundManager.h" />
+		<Unit filename="src/Texture/Texture.cpp" />
+		<Unit filename="src/Texture/Texture.h" />
+		<Unit filename="src/Texture/TextureManager.cpp" />
+		<Unit filename="src/Texture/TextureManager.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

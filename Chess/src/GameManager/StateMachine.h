@@ -5,7 +5,7 @@
 #include <stack>
 #include "GameState.h"
 
-    class StateMachine {
+class StateMachine {
     public:
       StateMachine();
       ~StateMachine();

@@ -79,7 +79,6 @@
 
       SoundManager::init();
 
-      // Engine::setEngineDifficulty(Engine::Random);
     }
 
     // loading images

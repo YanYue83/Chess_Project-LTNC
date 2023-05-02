@@ -1,11 +1,9 @@
 #include "Engine.h"
 
-#include "Engine.h"
 const int MAX_VALUE = 10000;
 
 std::map<int, int> PieceValue{{0, 0},   {1, 900}, {2, 300},
                             {3, 300}, {4, 500}, {5, 100}};
-    // Engine::EngineDifficulty difficulty = Engine::None;
 
     void Engine::handleFENString(const std::string fenString, BoardState &state) {
       /*
@@ -133,7 +131,7 @@ std::map<int, int> PieceValue{{0, 0},   {1, 900}, {2, 300},
       /*
        * Helper function
        * Used to add a given piece to a position on the board
-       * Then it adds it to the pieces of the player obejct
+       * Then it adds it to the pieces of the player object
        */
 
       Coordinate c = piece->getCoordinate();
@@ -172,9 +170,6 @@ std::map<int, int> PieceValue{{0, 0},   {1, 900}, {2, 300},
             continue;
           }
 
-          // This check exists because
-          // In piece.cpp there is a little bit of code
-          // And i want that code to completely ignore this part
           if (!(promotionInfo.location.i == 99)) {
             if (!promotionInfo.promotion && movingPiece->getTextureColumn() == 5 &&
                 move.endPos.isPromotionSquare()) {

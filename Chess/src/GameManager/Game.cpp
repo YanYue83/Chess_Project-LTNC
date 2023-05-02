@@ -16,9 +16,8 @@
 
     void Game::init(const char *title, int xpos, int ypos, int width, int height,
                     bool fullscreen) {
-
+       int flags = 0;
       // By default we have no flags
-      int flags = 0;
       if (fullscreen) {
         // If fullscreen, flag -> make window fullscreen
         flags = SDL_WINDOW_FULLSCREEN;
@@ -43,12 +42,12 @@
         SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
         if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
-          printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n",
+          SDL_Log("SDL_mixer could not initialize! SDL_mixer Error: %s\n",
                  Mix_GetError());
         }
 
         if (TTF_Init() == -1) {
-          printf("TTF_Init: %s\n", TTF_GetError());
+          SDL_Log("TTF_Init: %s\n", TTF_GetError());
           exit(2);
         }
 

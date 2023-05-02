@@ -11,7 +11,7 @@ Texture::Texture() {
 
     bool Texture::loadFromFile(std::string path) {
       /*
-       * Loads a texture from the given path
+       Loads a texture from the given path
        */
 
       Texture::clean();
@@ -27,7 +27,7 @@ Texture::Texture() {
     bool Texture::loadSentence(std::string sentence, int fontSize,
                                SDL_Color sentenceColor) {
       /*
-       * Loads a texture from sentece
+       * Loads a texture from sentence
        */
 
       Texture::clean();

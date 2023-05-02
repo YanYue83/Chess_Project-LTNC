@@ -49,7 +49,6 @@ int Test::getNumberOfMoves(int depth, const BoardState &state, bool first) {
   std::vector<Move> moves;
   Engine::generateAllMoves(state, allMoves);
 
-  // int loops = 0;
   int count = 0;
   for (std::vector<Move> &moveList : allMoves) {
     for (Move &move : moveList) {
@@ -65,15 +64,7 @@ int Test::getNumberOfMoves(int depth, const BoardState &state, bool first) {
         }
       } else {
         int num = 0;
-        /*
-        if (loops == 2) {
-          std::cout << "---" << std::endl;
-          num = getNumberOfMoves(depth - 1, s, true);
-          std::cout << "---" << std::endl;
-        } else {
-          num = getNumberOfMoves(depth - 1, s, false);
-        }
-        */
+
         num = getNumberOfMoves(depth - 1, s, false);
 
         count += num;
@@ -82,7 +73,6 @@ int Test::getNumberOfMoves(int depth, const BoardState &state, bool first) {
           std::cout << num << std::endl;
         }
       }
-      // loops++;
     }
   }
 

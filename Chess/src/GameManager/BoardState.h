@@ -19,7 +19,7 @@
       bool isWhiteTurn; // True if it's white's turn
 
       int dragPieceId;              // Stores the id of the piece being dragged
-      Coordinate dragPieceLocation; // Stores the locaiton of the grid
+      Coordinate dragPieceLocation; // Stores the location of the grid
 
       Player *players[2];
 

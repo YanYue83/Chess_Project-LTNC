@@ -33,7 +33,6 @@
        */
 
       TTF_Font *Roboto = TTF_OpenFont("assets/Roboto.ttf", fontSize);
-      // SDL_Color White = {255, 255, 255, 255};
 
       SDL_Surface *surfaceMessage =
           TTF_RenderText_Solid(Roboto, sentence, sentenceColor);

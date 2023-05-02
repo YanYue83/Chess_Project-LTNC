@@ -96,7 +96,7 @@ Piece::Piece(Coordinate pos, bool isColorWhite) : position(pos) {
 
     bool Piece::canMoveTo(Coordinate c, const BoardState &state) {
       /*
-       * Returs true if the piece can move to a square
+       * Returns true if the piece can move to a square
        */
 
       if (state.isEmpty(c)) {

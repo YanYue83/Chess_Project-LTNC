@@ -23,7 +23,7 @@
 
     void SoundManager::playSound(SoundManager::SoundType type) {
       /*
-       * Plays a sound depeneding on the type
+       * Plays a sound depending on the type
        */
 
       switch (type) {

@@ -125,7 +125,7 @@
     }
 
     void Gameboard::resetBoard() {
-      // We swap the names, namesTexture and score texture after game is reset
+      //  swap the names, namesTexture and score texture after game is reset
       std::string tempStr;
       float tempInt;
       tempInt = score[1];
@@ -354,7 +354,6 @@
             !(state.enPassantAvailable && state.enPassant == move.endPos)) {
           SDL_SetRenderDrawColor(Game::renderer, 100, 255, 0, renderAlpha);
 
-          // For rendering circles
 
           // Find center
           destRect.x += BLOCK_WIDTH / 2;
@@ -389,12 +388,12 @@
                 (i == 0) ? 0.2 * WINDOW_HEIGHT + capturedPieceOffsetHeight[index]
                          : 0.7 * WINDOW_HEIGHT - capturedPieceOffsetHeight[index];
 
-            // We just chaned destRect's w, h
+            // just chaned destRect's w, h
             destRect.h = destRect.w = offsetIncrease;
 
             pieceTexture.render(&destRect, &srcRect);
 
-            destRect.h = destRect.w = BLOCK_WIDTH; // We restored it
+            destRect.h = destRect.w = BLOCK_WIDTH; //restored it
 
             if (destRect.x + capturedPieceOffset[index] > WINDOW_WIDTH) {
               capturedPieceOffset[index] = 0;
@@ -424,10 +423,6 @@
         srcRect.x = draggedPiece->getTextureColumn() * srcRect.h;
         pieceTexture.render(&destRect, &srcRect);
       }
-
-      /*
-       * We change the size of destRect from here, be careful
-       */
 
       // Render Player Names
       for (int i = 0; i < 2; i++) {

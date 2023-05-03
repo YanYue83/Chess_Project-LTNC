@@ -15,7 +15,6 @@
 
           bool isWhite();
           std::string getName();
-          // void addPiece(Piece *p);
           friend class Gameboard;
           friend class Engine;
           friend struct BoardState;

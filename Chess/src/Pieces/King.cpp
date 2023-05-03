@@ -11,7 +11,7 @@
 
     int King::generateAllMoves(const BoardState &state, std::vector<Move> &moves) {
       /*
-       * Generates all the movesfor the king
+       * Generates all the moves for the king
        * Returns the number of moves
        */
 

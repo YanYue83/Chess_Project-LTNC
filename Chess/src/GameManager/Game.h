@@ -18,7 +18,7 @@
     };
     };
 
-    const int WINDOW_HEIGHT = 720;
+    const int WINDOW_HEIGHT = 920;
     const int WINDOW_WIDTH = 1280;
     const int BLOCK_WIDTH = 80;
     const int FPS = 60;

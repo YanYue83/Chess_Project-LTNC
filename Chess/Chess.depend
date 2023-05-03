@@ -174,7 +174,7 @@
 	"Game.h"
 	"Test.h"
 
-1682842976 e:\myfirstgame\chess\src\gamemanager\game.h
+1683077381 e:\myfirstgame\chess\src\gamemanager\game.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
@@ -227,7 +227,7 @@
 	<string>
 	<vector>
 
-1682846095 e:\myfirstgame\chess\src\player\player.h
+1683081070 e:\myfirstgame\chess\src\player\player.h
 	"Piece.h"
 	"Structure.h"
 	<string>
@@ -267,7 +267,7 @@
 	"Test.h"
 	<chrono>
 
-1683035290 source:e:\myfirstgame\chess\src\gamemanager\game.cpp
+1683077861 source:e:\myfirstgame\chess\src\gamemanager\game.cpp
 	"Game.h"
 	"GameMenu.h"
 	"GameBoard.h"
@@ -277,7 +277,7 @@
 	"GameState.h"
 	"Texture.h"
 
-1683034167 source:e:\myfirstgame\chess\src\gamemanager\gameboard.cpp
+1683079465 source:e:\myfirstgame\chess\src\gamemanager\gameboard.cpp
 	"GameBoard.h"
 	"Engine.h"
 	<SDL_render.h>

@@ -44,7 +44,6 @@
       return Message;
     }
 
-    // Copy and paste from stack overflow
     void TextureManager::DrawFillCircle(SDL_Renderer *renderer, int x, int y,
                                         int radius) {
 

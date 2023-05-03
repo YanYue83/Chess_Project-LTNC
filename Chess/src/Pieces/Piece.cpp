@@ -40,20 +40,20 @@ Piece::Piece(Coordinate pos, bool isColorWhite) : position(pos) {
 
       int moveCount = 0;
       for (Move move : pseudoLegalMoves) {
-        // Because of shallow copy this does not work, do not use it yet
-        BoardState newState = state; // Somehow make this a full copy
+
+        BoardState newState = state;
         newState.dragPieceLocation = move.startPos;
         newState.dragPieceId = state.getID(move.startPos);
         Promotion::uiInfo temp = {false, Coordinate({99, 99})};
 
         Piece *p = newState.getPiece(move.startPos);
         /*
-         * TODO Fix Casteling
+         * TODO Fix Castling
          * If the king is in check (direct line of fire) or any square along the
          * path is, not castleable
          *
-         * if the moving piece is a king, we check if it is under direct line of
-         * fire, if it is, we disable all casteling moves
+         * if the moving piece is a king, check if it is under direct line of
+         * fire, if it is, disable all castling moves
          *
          */
         if (p->getTextureColumn() == 0 && (move.startPos.j - move.endPos.j > 1 ||
@@ -64,8 +64,8 @@ Piece::Piece(Coordinate pos, bool isColorWhite) : position(pos) {
           }
           newState.isWhiteTurn = !newState.isWhiteTurn;
 
-          // Since the side movement moves are checked before casteling
-          // We can see if the side movement moves are legal, if so, do casteling
+          // Since the side movement moves are checked before castling
+          // We can see if the side movement moves are legal, if so, do castling
           int directionJ = move.endPos.j - move.startPos.j;
           bool found = false;
           for (Move move : moves) {
@@ -80,7 +80,7 @@ Piece::Piece(Coordinate pos, bool isColorWhite) : position(pos) {
 
         /*
          * if our king is in direct line of fire from opponent,
-         * bad move we no add
+         * bad move no add
          */
         if (!Engine::canDirectAttackKing(newState)) {
           moves.push_back(move);
